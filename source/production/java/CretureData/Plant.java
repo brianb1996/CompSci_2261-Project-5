@@ -1,15 +1,15 @@
 package CretureData;
 
-public class Plant extends Creature implements Reproduction{
+class Plant extends Creature implements Reproduction{
     Plant(){
         this.name ="";
     }
-    Plant(String plantName){
+    Plant(String name){
         this.name=name;
     }
     @Override
     public String toEat(){
-        return "sunlight (aka photosynthesis)";
+        return "Sunlight (aka photosynthesis)";
     }
     @Override
     public String modeOfReproduction(){
@@ -20,7 +20,7 @@ public class Plant extends Creature implements Reproduction{
         if(this.name.isEmpty()){
             return null;
         }else{
-            return ("Plant: " + this.name + super.toString(this));
+            return (this.name + super.toString(this));
         }
     }
 }

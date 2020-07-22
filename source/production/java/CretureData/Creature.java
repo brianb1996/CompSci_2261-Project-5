@@ -1,5 +1,7 @@
 package CretureData;
 
+import java.util.Iterator;
+
 /**For your fifth project, you will be needing to do three things:
  *
  * 1) Implement an Interface.
@@ -85,7 +87,7 @@ package CretureData;
  *
  */
 
-abstract class Creature implements Reproduction {
+abstract class Creature implements Reproduction, Comparable<Creature> {
     String name;
     Creature(){
     }
@@ -98,8 +100,19 @@ abstract class Creature implements Reproduction {
     @Override
     public String toString(){
         return"Creature Abstract Class";
-    };
+    }
     public String toString(Creature currentCreature){
         return ("\n\tEats via: " + currentCreature.toEat() + "\n\tMode of Reproduction: " + currentCreature.modeOfReproduction());
     }
+
+    public int compareTo(Creature c1){
+        if(this.name.equals(c1.name)){
+            return 0;
+        }
+        else{
+            return this.name.compareTo(c1.name);
+        }
+    }
+
+
 }

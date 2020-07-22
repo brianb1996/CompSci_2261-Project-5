@@ -1,6 +1,6 @@
 package CretureData;
 
-public class Fungi extends Creature implements Reproduction{
+class Fungi extends Creature implements Reproduction{
     Fungi(){
         this.name = "";
     }
@@ -9,7 +9,7 @@ public class Fungi extends Creature implements Reproduction{
     }
     @Override
     public String toEat(){
-        return "external digestion with hyphae";
+        return "External Digestion with Hyphae";
     }
     @Override
     public String modeOfReproduction() {
@@ -20,7 +20,7 @@ public class Fungi extends Creature implements Reproduction{
         if(this.name.isEmpty()){
             return null;
         }else{
-            return ("Fungi: " + this.name + super.toString(this));
+            return (this.name + super.toString(this));
         }
     }
 }

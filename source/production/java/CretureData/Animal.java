@@ -1,6 +1,6 @@
 package CretureData;
 
-public class Animal extends Creature implements Reproduction{
+class Animal extends Creature implements Reproduction{
     Animal(){
         this.name="";
     }
@@ -20,8 +20,8 @@ public class Animal extends Creature implements Reproduction{
         if(this.name.isEmpty()){
             return null;
         }else{
-            return ("Animal: " + this.name + super.toString(this));
+            return (this.name + super.toString(this));
         }
-
     }
+
 }
