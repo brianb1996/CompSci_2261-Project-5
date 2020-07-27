@@ -3,17 +3,20 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class CreatureLists extends Creature implements Reproduction {
+//Creature List is used to order and display creature objects in a treeSet.
+public class CreatureLists{
     Set<Plant> plantSet;
     Set<Animal> animalSet;
     Set<Fungi> fungiSet;
 
+    //CreatureLists constructor
     public CreatureLists(){
         this.plantSet = new TreeSet<>();
         this.animalSet = new TreeSet<>();
         this.fungiSet = new TreeSet<>();
     }
 
+    //adds a new creature to the corresponding TreeSet
     protected void addList(Object o1) {
         if(o1.getClass().equals(Animal.class)){
             animalSet.add((Animal)o1);
@@ -24,36 +27,28 @@ public class CreatureLists extends Creature implements Reproduction {
         }
     }
 
+    //Displays the Animals in the animalSet TreeSet
     protected void displayAnimals(){
         System.out.println("Animals: ");
         for(Animal a1: animalSet){
-            System.out.println(a1.toString());
+            System.out.println("\t" + a1.toString());
         }
     }
 
+    //Displays the Plants in the plantSet TreeSet
     protected void displayPlants(){
         System.out.println("Plants: ");
         for(Plant p1: plantSet){
-            System.out.println(p1.toString());
+            System.out.println("\t" + p1.toString());
         }
     }
 
+    //Displays the Fungi in the fungiSet TreeSet
     protected void displayFungi(){
         System.out.println("Fungi: ");
         for(Fungi f1: fungiSet){
-            System.out.println(f1.toString());
+            System.out.println("\t" + f1.toString());
         }
     }
-
-
-    @Override
-    public String toEat() {
-        return null;
-    }
-    @Override
-    public String modeOfReproduction() {
-        return null;
-    }
-
 
 }

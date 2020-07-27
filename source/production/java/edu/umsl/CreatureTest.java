@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class CreatureTest {
 
+    // main method to run the program
     static public void main(String[] args){
         CreatureLists currentLists = new CreatureLists();
         firstCreatures(currentLists);
@@ -17,7 +18,7 @@ public class CreatureTest {
         do {
             goodInput = true;
             try {
-                System.out.println("Creature Database");
+                System.out.println("Taxonomist Database of Creatures\n");
                 System.out.println("Press [1] - Add a new creature");
                 System.out.println("Press [2] - View Creatures by category");
                 System.out.println("Press [3] - Exit the Database");
@@ -42,6 +43,8 @@ public class CreatureTest {
         }while(goodInput);
         System.out.println("Now Exiting the Database");
     }
+
+    // used to create a object for the animal, plant, and fungi class
     public static void firstCreatures (CreatureLists currentList){
         AddAndDisplay.NameNewCreature(currentList, "Tiger", 'A');
         AddAndDisplay.NameNewCreature(currentList, "Northern Pine Tree", 'P');

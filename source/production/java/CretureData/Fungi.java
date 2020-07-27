@@ -1,6 +1,7 @@
 package CretureData;
 
 class Fungi extends Creature implements Reproduction{
+    // constructors are not public so that objects can not be made outside of the package
     Fungi(){
         this.name = "";
     }

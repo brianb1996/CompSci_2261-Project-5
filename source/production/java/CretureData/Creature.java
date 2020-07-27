@@ -87,8 +87,10 @@ import java.util.Iterator;
  *
  */
 
+//Abstract class Creature
 abstract class Creature implements Reproduction, Comparable<Creature> {
     String name;
+
     Creature(){
     }
     public abstract String toEat();
@@ -101,10 +103,12 @@ abstract class Creature implements Reproduction, Comparable<Creature> {
     public String toString(){
         return"Creature Abstract Class";
     }
+    //all subclasses use this format to output Eats via: and Mode of Reproduction:
     public String toString(Creature currentCreature){
-        return ("\n\tEats via: " + currentCreature.toEat() + "\n\tMode of Reproduction: " + currentCreature.modeOfReproduction());
+        return ("\n\t\tEats via: " + currentCreature.toEat() + "\n\t\tMode of Reproduction: " + currentCreature.modeOfReproduction());
     }
 
+    // implements the compareTo method from Comparable interface so a treeSet can be used to order the creatures alphabetically
     public int compareTo(Creature c1){
         if(this.name.equals(c1.name)){
             return 0;

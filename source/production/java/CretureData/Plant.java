@@ -1,6 +1,8 @@
 package CretureData;
 
 class Plant extends Creature implements Reproduction{
+    // constructors are not public so that objects can not be made outside of the package
+
     Plant(){
         this.name ="";
     }

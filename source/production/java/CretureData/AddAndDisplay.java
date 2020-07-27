@@ -3,16 +3,17 @@ package CretureData;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
 public class AddAndDisplay {
 
     private AddAndDisplay(){}
 
+    // based on the users input the corresponding prompt will appear
     public static void NameNewCreature(CreatureLists currentCreatureList){
         Scanner userInput;
         System.out.println("What kind of creature would you like to add?");
-        System.out.println("Press [X] - to Exit");
 
-        char firstChar = input();
+        char firstChar = input("Press [X] - to Exit");
         userInput = new Scanner(System.in);
         switch (firstChar) {
             case 'a', 'A' -> {
@@ -34,6 +35,8 @@ public class AddAndDisplay {
         }
     }
 
+    // based on the input passed by the user a new creature will be created
+    // used only to create creatures
     public static void NameNewCreature(CreatureLists currentCreatureList, String name, char classLetter) {
         switch (classLetter) {
             case 'a', 'A' -> {
@@ -49,11 +52,11 @@ public class AddAndDisplay {
         }
     }
 
+    //used to prompt the user for which category of creature they would like to view
     public static void DisplayCategory(CreatureLists currentList){
         Scanner userInput = new Scanner(System.in);
         System.out.println("What Creatures would you like to view?");
-        System.out.println("Press [X] - for All Creatures");
-        char firstChar = input();
+        char firstChar = input("Press [X] - for All Creatures");
                 switch (firstChar) {
                     case 'a', 'A' -> {
                         currentList.displayAnimals();
@@ -74,11 +77,14 @@ public class AddAndDisplay {
                 }
     }
 
-    public static char input(){
+    //takes input from the user to be used for the displayCategory and nameNewCreature method
+    //if the input is does not correspond to the chars in the if statement the user will be prompted to enter a valid input
+    public static char input(String x){ // string x corresponds to the prompt for the char x, if the user enters x for the displayCreature method all the creatures will be displayed
         Scanner userInput = new Scanner(System.in);
         char firstChar;
         do {
             try {
+                System.out.println(x);
                 System.out.println("Press [A] - for Animal");
                 System.out.println("Press [P] - for Plant");
                 System.out.println("Press [F] - for Fungi");
