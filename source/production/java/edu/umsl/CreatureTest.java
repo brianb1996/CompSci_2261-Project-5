@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class CreatureTest {
 
     // main method to run the program
+    // the user is given the option of additionally adding
     static public void main(String[] args){
         CreatureLists currentLists = new CreatureLists();
         firstCreatures(currentLists);
@@ -47,8 +48,14 @@ public class CreatureTest {
     // used to create a object for the animal, plant, and fungi class
     public static void firstCreatures (CreatureLists currentList){
         AddAndDisplay.NameNewCreature(currentList, "Tiger", 'A');
+        AddAndDisplay.NameNewCreature(currentList, "Mountain Lion", 'A');
+        AddAndDisplay.NameNewCreature(currentList, "Gray Squirrel", 'A');
         AddAndDisplay.NameNewCreature(currentList, "Northern Pine Tree", 'P');
+        AddAndDisplay.NameNewCreature(currentList, "Ragweed", 'P');
+        AddAndDisplay.NameNewCreature(currentList, "Kentucky Bluegrass", 'P');
         AddAndDisplay.NameNewCreature(currentList, "Pavement Mushroom", 'F');
+        AddAndDisplay.NameNewCreature(currentList, "Bretziella Fagacearum", 'F');
+        AddAndDisplay.NameNewCreature(currentList, "Yeast", 'F');
     }
 
 }
